@@ -3,8 +3,8 @@ apply plugin: 'maven-publish'
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = 'mobile.devops.solution.ui'
-            artifactId = 'mdos_ui'
+            groupId = project.groupId
+            artifactId = project.name
             version = '1.0.0'
             def projectName = project.getName()
             artifact "build/outputs/aar/${projectName}-release.aar"
@@ -16,7 +16,7 @@ publishing {
             url = uri("https://maven.pkg.github.com/liulijun-dev/MobileDevOpsSolution")
             credentials {
                 username = 'liulijun-dev'
-                password = '261f17c8aa6ec057a8d3ae6efcc5e475a59b2d33'
+                password = 'd8e21843fff5663bb9eecfbf4011f40da2038c9a'
             }
         }
     }
